@@ -1,3 +1,4 @@
+import ar.edu.unlam.tallerweb2.biblioteca.Libro
 import ar.edu.unlam.tallerweb2.biblioteca.Role
 import ar.edu.unlam.tallerweb2.biblioteca.User
 import ar.edu.unlam.tallerweb2.biblioteca.UserRole
@@ -20,6 +21,11 @@ class BootStrap {
 
 	  UserRole.create User, userRole, true
 
-     
+	  def libro = new Libro(id:'1',
+		  titulo:'El simbolo Perdido',
+	      autor:'Dan Brown',
+	      estado:'Disponible',
+	      genero:'Ficcion')
+	      libro.save(true)
    }
 }

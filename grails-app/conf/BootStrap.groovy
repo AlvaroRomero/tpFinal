@@ -21,11 +21,12 @@ class BootStrap {
 
 	  UserRole.create User, userRole, true
 
-	  def libro = new Libro(id:'1',
+	  def libro = new Libro(
 		  titulo:'El simbolo Perdido',
 	      autor:'Dan Brown',
 	      estado:'Disponible',
-	      genero:'Ficcion')
-	      libro.save(true)
+	      genero:'Ficcion',
+		  prestadoa:'')
+	      libro.save(flush: true)
    }
 }

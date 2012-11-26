@@ -53,5 +53,7 @@ grails.project.dependency.resolution = {
 
         compile ':cache:1.0.0'
 		compile ":spring-security-core:1.2.7.1"
+		compile ":sound-manager:0.4"
+		compile ":richui:0.8"
     }
 }

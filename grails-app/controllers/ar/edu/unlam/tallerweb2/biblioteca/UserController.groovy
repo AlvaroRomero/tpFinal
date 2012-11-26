@@ -5,6 +5,9 @@ import ar.edu.unlam.tallerweb2.biblioteca.Role
 import ar.edu.unlam.tallerweb2.biblioteca.User
 import ar.edu.unlam.tallerweb2.biblioteca.UserRole
 
+import grails.plugins.springsecurity.Secured
+
+@Secured(['ROLE_ADMIN'])
 class UserController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]

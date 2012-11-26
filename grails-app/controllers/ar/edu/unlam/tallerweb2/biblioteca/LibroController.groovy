@@ -1,9 +1,12 @@
 package ar.edu.unlam.tallerweb2.biblioteca
 
 import org.springframework.dao.DataIntegrityViolationException
+import grails.plugins.springsecurity.Secured
+
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
 
 class LibroController {
-
+	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {

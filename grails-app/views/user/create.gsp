@@ -6,7 +6,8 @@
 		<g:set var="entityName" value="${message(code: 'user.label', default: 'User')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
-	<body>
+	<body><sec:ifAllGranted roles="ROLE_ADMIN">
+	
 		<a href="#create-user" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
@@ -35,5 +36,6 @@
 				</fieldset>
 			</g:form>
 		</div>
+	</sec:ifAllGranted>
 	</body>
 </html>

@@ -16,17 +16,15 @@
 				
 				<sec:ifAllGranted roles="ROLE_ADMIN">
 				<li>Soy admin</li>
-				<li>ABM Libros</li>
-				<li>ABM Usuarios</li>
-			    <li>Listado Libros</li>
-			    <li>Registrar prestamo</li>
-			    <li>Registrar retorno</li>
+				<li><g:link controller="Libro" >Libros</g:link></li>
+				<li><g:link controller="user" >Usuarios</g:link></li>
+			    
 				
 				</sec:ifAllGranted>
 				
 				<sec:ifAllGranted roles="ROLE_USER">
 				<li>Soy User</li>
-				<li>Consulta libro</li>
+				<li><g:link controller="Libro" >Libros</g:link></li>
 				
 				</sec:ifAllGranted>
   </ul>

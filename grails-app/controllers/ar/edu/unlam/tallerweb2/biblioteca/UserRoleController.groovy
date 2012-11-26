@@ -2,6 +2,10 @@ package ar.edu.unlam.tallerweb2.biblioteca
 
 import org.springframework.dao.DataIntegrityViolationException
 
+import grails.plugins.springsecurity.Secured
+
+
+@Secured(['ROLE_ADMIN'])
 class UserRoleController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]

@@ -11,7 +11,10 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+				
+				<sec:ifAllGranted roles="ROLE_ADMIN">
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				</sec:ifAllGranted>
 				<li><g:form action="buscaPorTitulo" method="get"><g:textField name='a' value='Busqueda por titulo'></g:textField></g:form></li>
 				<li><g:form action="buscaPorAutor" method="get"><g:textField name='a' value='Busqueda por autor'></g:textField></g:form></li>
 			</ul>

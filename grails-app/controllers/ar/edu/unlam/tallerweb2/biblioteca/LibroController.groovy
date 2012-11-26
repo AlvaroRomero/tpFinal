@@ -21,13 +21,13 @@ class LibroController {
 	   def buscaPorTitulo(Integer max) {
 		   def a=params.a		   
 		   params.max = Math.min(max ?: 10, 100)
-		   [libroInstanceList: Libro.findAllByTitulo(a), libroInstanceTotal: Libro.count()]
+		   [libroInstanceList: Libro.findAllByTitulo(a), libroInstanceTotal: 1]
 	   }
 	   
 	   def buscaPorAutor(Integer max) {
 		   def a=params.a
 		   params.max = Math.min(max ?: 10, 100)
-		   [libroInstanceList: Libro.findAllByAutor(a), libroInstanceTotal: Libro.count()]
+		   [libroInstanceList: Libro.findAllByAutor(a), libroInstanceTotal: 1]
 	   }
 
     def create() {

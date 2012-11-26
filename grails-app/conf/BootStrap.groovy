@@ -23,32 +23,136 @@ class BootStrap {
 	  User = new User(username: 'Alvaro', enabled: true, password: '1234')
 	  User.save(flush: true)
 
-	  UserRole.create User, userRole, true
+	  UserRole.create User, adminRole, true
 
+	  User = new User(username: 'Diego', enabled: true, password: '1234')
+	  User.save(flush: true)
+
+	  UserRole.create User, userRole, true
+	  
+	  User = new User(username: 'Nico', enabled: true, password: '1234')
+	  User.save(flush: true)
+
+	  UserRole.create User, userRole, true
+	  
+	  User = new User(username: 'pepe', enabled: true, password: 'pepe')
+	  User.save(flush: true)
+
+	  UserRole.create User, userRole, true
+	  
 	  def libro = new Libro(
 		  titulo:'El simbolo Perdido',
 	      autor:'Dan Brown',
 	      estado:'Disponible',
-	      genero:'Ficcion',
-		  prestadoa:'')
+	      genero:'Ficcion')
 	      libro.save(flush: true)
 		  
 		  libro = new Libro(
 			  titulo:'La conspiracion',
 			  autor:'Dan Brown',
 			  estado:'Disponible',
-			  genero:'Ficcion',
-			  prestadoa:'')
+			  genero:'Ficcion')
 			  libro.save(flush: true)
 			  
 		  libro = new Libro(
 				  titulo:'Heridas por arma de fuego',
 				  autor:'Di Maio',
 				  estado:'No disponible',
-				  genero:'Manual',
-				  prestadoa:'Seba')
+				  genero:'Manual')
 				  libro.save(flush: true)
 		  
+		  libro = new Libro(
+			  titulo:'Sociedades secretas',
+			  autor:'Hugo Ariel Macchiavelli',
+			  estado:'Disponible',
+			  genero:'Manual')
+			  libro.save(flush: true)
+			  
+			  
+		  libro = new Libro(
+			  titulo:'SDiccionario americano',
+			  autor:'Varios',
+			  estado:'Disponible',
+			  genero:'Diccionario Ingles-Castellano')
+			  libro.save(flush: true)
+				  
+				  
+		  libro = new Libro(
+			  titulo:'El psicoanalista',
+			  autor:'John Katzenbach',
+			  estado:'Disponible',
+			  genero:'Ficcion')
+			  libro.save(flush: true)
+					  
+		  libro = new Libro(
+			  titulo:'El psicoanalista',
+			  autor:'John Katzenbach',
+			  estado:'Disponible',
+			  genero:'Ficcion')
+			  libro.save(flush: true)
+						  
+		  libro = new Libro(
+			  titulo:'Danza de dragones',
+			  autor:'R.R.Martin',
+			  estado:'Disponible',
+			  genero:'Ficcion')
+			  libro.save(flush: true)
+							  
+		  libro = new Libro(
+			  titulo:'Orientacion a objetos con Java',
+			  autor:'Carlos Fontela',
+			  estado:'Disponible',
+			  genero:'Tecnico')
+			  libro.save(flush: true)
+								  
+		  libro = new Libro(
+			  titulo:'Fundamentos de algoritmos y programacion',
+			  autor:'Frank',
+			  estado:'Disponible',
+			  genero:'Tecnico')
+			  libro.save(flush: true)
+			  
+		  libro = new Libro(
+			  titulo:'Fundamentos de algoritmos y programacion',
+			  autor:'Frank',
+			  estado:'Disponible',
+			  genero:'Tecnico')
+			  libro.save(flush: true)
+									  
+		  libro = new Libro(
+			  titulo:'Ubuntu',
+			  autor:'Benchimol',
+			  estado:'Disponible',
+			  genero:'Tecnico')
+			  libro.save(flush: true)
+										  
+		  libro = new Libro(
+			  titulo:'202 Secretos de Linux',
+			  autor:'Arena',
+			  estado:'Disponible',
+			  genero:'Tecnico')
+			  libro.save(flush: true)
+											  
+		  libro = new Libro(
+			  titulo:'Administracion de Windows',
+			  autor:'Holm',
+			  estado:'Disponible',
+			  genero:'Tecnico')
+			  libro.save(flush: true)
+			  
+		  libro = new Libro(
+			  titulo:'Cocina sin excusas',
+			  autor:'Massey',
+			  estado:'Disponible',
+			  genero:'Cocina')
+			  libro.save(flush: true)
+			  
+		  libro = new Libro(
+			  titulo:'Cocina sin excusas',
+			  autor:'Massey',
+			  estado:'Disponible',
+			  genero:'Cocina')
+			  libro.save(flush: true)
    }
    
    

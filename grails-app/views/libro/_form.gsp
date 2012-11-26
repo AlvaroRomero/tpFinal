@@ -34,11 +34,5 @@
 	<g:textField name="genero" required="" value="${libroInstance?.genero}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: libroInstance, field: 'prestadoa', 'error')} ">
-	<label for="prestadoa">
-		<g:message code="libro.prestadoa.label" default="Prestadoa" />
-		
-	</label>
-	<g:textField name="prestadoa" value="${libroInstance?.prestadoa}"/>
-</div>
+
 

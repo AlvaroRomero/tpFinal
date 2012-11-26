@@ -7,7 +7,7 @@ class Libro {
 	String autor
 	String estado
 	String genero
-	String prestadoa
+	
 
     static constraints = {
 		
@@ -15,6 +15,6 @@ class Libro {
 		autor blank: false
 		estado blank: false
 		genero blank: false
-		prestadoa blank: true
+		
     }
 }

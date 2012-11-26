@@ -59,20 +59,19 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${libroInstance?.prestadoa}">
-				<li class="fieldcontain">
-					<span id="prestadoa-label" class="property-label"><g:message code="libro.prestadoa.label" default="Prestadoa" /></span>
-					
-						<span class="property-value" aria-labelledby="prestadoa-label"><g:fieldValue bean="${libroInstance}" field="prestadoa"/></span>
-					
-				</li>
-				</g:if>
+				
 			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${libroInstance?.id}" />
 					<g:link class="edit" action="edit" id="${libroInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+					
+					<g:link class="Registro prestamo" action="registroprestamo" id="${libroInstance?.id}"><g:message code="Registrar Prestamo" default="Registrar Prestamo" /></g:link>
+					
+					<g:link class="Registro devolucion" action="registrodevolucion" id="${libroInstance?.id}"><g:message code="registrar Devolucion" default="Registrar Devolucion" /></g:link>
+					
+					
 					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>

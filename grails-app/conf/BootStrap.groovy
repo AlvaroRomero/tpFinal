@@ -28,5 +28,24 @@ class BootStrap {
 	      genero:'Ficcion',
 		  prestadoa:'')
 	      libro.save(flush: true)
+		  
+		  libro = new Libro(
+			  titulo:'La conspiracion',
+			  autor:'Dan Brown',
+			  estado:'Disponible',
+			  genero:'Ficcion',
+			  prestadoa:'')
+			  libro.save(flush: true)
+			  
+		  libro = new Libro(
+				  titulo:'Heridas por arma de fuego',
+				  autor:'Di Maio',
+				  estado:'No disponible',
+				  genero:'Manual',
+				  prestadoa:'Seba')
+				  libro.save(flush: true)
+		  
    }
+   
+   
 }

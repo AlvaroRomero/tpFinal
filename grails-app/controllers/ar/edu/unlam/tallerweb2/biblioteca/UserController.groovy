@@ -1,6 +1,9 @@
 package ar.edu.unlam.tallerweb2.biblioteca
 
 import org.springframework.dao.DataIntegrityViolationException
+import ar.edu.unlam.tallerweb2.biblioteca.Role
+import ar.edu.unlam.tallerweb2.biblioteca.User
+import ar.edu.unlam.tallerweb2.biblioteca.UserRole
 
 class UserController {
 
@@ -25,6 +28,7 @@ class UserController {
             render(view: "create", model: [userInstance: userInstance])
             return
         }
+		
 
         flash.message = message(code: 'default.created.message', args: [message(code: 'user.label', default: 'User'), userInstance.id])
         redirect(action: "show", id: userInstance.id)

@@ -10,10 +10,22 @@ class LibroController {
         redirect(action: "list", params: params)
     }
 
-    def list(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        [libroInstanceList: Libro.list(params), libroInstanceTotal: Libro.count()]
-    }
+   	def list(Integer max) {
+		params.max = Math.min(max ?: 10, 100)
+		[libroInstanceList: Libro.list(params), libroInstanceTotal: Libro.count()]
+	}
+	   
+	   def buscaPorTitulo(Integer max) {
+		   def a=params.a		   
+		   params.max = Math.min(max ?: 10, 100)
+		   [libroInstanceList: Libro.findAllByTitulo(a), libroInstanceTotal: Libro.count()]
+	   }
+	   
+	   def buscaPorAutor(Integer max) {
+		   def a=params.a
+		   params.max = Math.min(max ?: 10, 100)
+		   [libroInstanceList: Libro.findAllByAutor(a), libroInstanceTotal: Libro.count()]
+	   }
 
     def create() {
         [libroInstance: new Libro(params)]
@@ -99,4 +111,22 @@ class LibroController {
             redirect(action: "show", id: id)
         }
     }
+	
+	def registroprestamo() {
+		def b = Libro.get(params.id)
+		b.estado = "No Disponible"
+		b.save()
+
+		// redirect to a scaffolded action
+		redirect(action: "list")
+	}
+	
+	def registrodevolucion() {
+		def b = Libro.get(params.id)
+		b.estado = "Disponible"
+		b.save()
+
+		// redirect to a scaffolded action
+		redirect(action: "list")
+	}
 }

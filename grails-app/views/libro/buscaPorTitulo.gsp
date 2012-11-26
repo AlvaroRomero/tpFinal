@@ -1,4 +1,3 @@
-
 <%@ page import="ar.edu.unlam.tallerweb2.biblioteca.Libro" %>
 <!doctype html>
 <html>

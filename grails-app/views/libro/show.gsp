@@ -67,13 +67,14 @@
 			<g:form>
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${libroInstance?.id}" />
+					
+					<g:link controller="LibroLector" action="registrolectura" id="${libroInstance?.titulo}">Lo lei !!!</g:link>
+					
 					<sec:ifAllGranted roles="ROLE_ADMIN">
+					<g:link class="Registro prestamo" action="registroprestamo" id="${libroInstance?.id}"><g:message code="Registrar Prestamo" default="No disponible" /></g:link>
+					
+					<g:link class="Registro devolucion" action="registrodevolucion" id="${libroInstance?.id}"><g:message code="registrar Devolucion" default="Disponible" /></g:link>
 					<g:link class="edit" action="edit" id="${libroInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					
-					<g:link class="Registro prestamo" action="registroprestamo" id="${libroInstance?.id}"><g:message code="Registrar Prestamo" default="Registrar Prestamo" /></g:link>
-					
-					<g:link class="Registro devolucion" action="registrodevolucion" id="${libroInstance?.id}"><g:message code="registrar Devolucion" default="Registrar Devolucion" /></g:link>
-					
 					
 					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				    </sec:ifAllGranted>

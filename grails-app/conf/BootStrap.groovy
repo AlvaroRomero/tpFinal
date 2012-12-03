@@ -1,4 +1,5 @@
 import ar.edu.unlam.tallerweb2.biblioteca.Libro
+import ar.edu.unlam.tallerweb2.biblioteca.LibroLector
 import ar.edu.unlam.tallerweb2.biblioteca.Role
 import ar.edu.unlam.tallerweb2.biblioteca.User
 import ar.edu.unlam.tallerweb2.biblioteca.UserRole
@@ -76,13 +77,6 @@ class BootStrap {
 			  genero:'Diccionario Ingles-Castellano')
 			  libro.save(flush: true)
 				  
-				  
-		  libro = new Libro(
-			  titulo:'El psicoanalista',
-			  autor:'John Katzenbach',
-			  estado:'Disponible',
-			  genero:'Ficcion')
-			  libro.save(flush: true)
 					  
 		  libro = new Libro(
 			  titulo:'El psicoanalista',
@@ -113,13 +107,6 @@ class BootStrap {
 			  libro.save(flush: true)
 			  
 		  libro = new Libro(
-			  titulo:'Fundamentos de algoritmos y programacion',
-			  autor:'Frank',
-			  estado:'Disponible',
-			  genero:'Tecnico')
-			  libro.save(flush: true)
-									  
-		  libro = new Libro(
 			  titulo:'Ubuntu',
 			  autor:'Benchimol',
 			  estado:'Disponible',
@@ -147,12 +134,37 @@ class BootStrap {
 			  genero:'Cocina')
 			  libro.save(flush: true)
 			  
-		  libro = new Libro(
-			  titulo:'Cocina sin excusas',
-			  autor:'Massey',
-			  estado:'Disponible',
-			  genero:'Cocina')
-			  libro.save(flush: true)
+			  
+		 def librolector = new LibroLector(
+				  lector:'Diego',
+				  libro:'Cocina sin excusas',
+				  fecha: new Date() )				  
+				  librolector.save(flush: true)
+				  
+		  librolector = new LibroLector(
+			  lector:'Diego',
+			  libro:'Danza de dragones',
+			  fecha: new Date() )
+			  librolector.save(flush: true)
+					  
+		  librolector = new LibroLector(
+			  lector:'Diego',
+			  libro:'Administracion de Windows',
+			  fecha: new Date() )
+			  librolector.save(flush: true)
+						  
+		  librolector = new LibroLector(
+			  lector:'Seba',
+			  libro:'La conspiracion',
+			  fecha: new Date() )
+			  librolector.save(flush: true)
+							  
+		  librolector = new LibroLector(
+			  lector:'Seba',
+			  libro:'Orientacion a objetos con Java',
+			  fecha: new Date() )
+			  librolector.save(flush: true)
+			  
    }
    
    

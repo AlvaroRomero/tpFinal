@@ -3,10 +3,20 @@ package ar.edu.unlam.tallerweb2.biblioteca
 import org.springframework.dao.DataIntegrityViolationException
 import grails.plugins.springsecurity.Secured
 
+import org.springframework.security.authentication.AccountExpiredException
+import org.springframework.security.authentication.CredentialsExpiredException
+import org.springframework.security.authentication.DisabledException
+import org.springframework.security.authentication.LockedException
+import org.springframework.security.core.context.SecurityContextHolder as SCH
+import org.springframework.security.web.WebAttributes
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter
+
 @Secured(['IS_AUTHENTICATED_REMEMBERED'])
 
 class LibroController {
 	
+	def springSecurityService
+	def buscaService
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
@@ -18,17 +28,7 @@ class LibroController {
 		[libroInstanceList: Libro.list(params), libroInstanceTotal: Libro.count()]
 	}
 	   
-	   def buscaPorTitulo(Integer max) {
-		   def a=params.a		   
-		   params.max = Math.min(max ?: 10, 100)
-		   [libroInstanceList: Libro.findAllByTitulo(a), libroInstanceTotal: 1]
-	   }
 	   
-	   def buscaPorAutor(Integer max) {
-		   def a=params.a
-		   params.max = Math.min(max ?: 10, 100)
-		   [libroInstanceList: Libro.findAllByAutor(a), libroInstanceTotal: 1]
-	   }
 
     def create() {
         [libroInstance: new Libro(params)]
@@ -132,4 +132,17 @@ class LibroController {
 		// redirect to a scaffolded action
 		redirect(action: "list")
 	}
+	
+	def buscaPorTitulo(Integer max) {
+		
+	params.max = Math.min(max ?: 10, 100)
+	buscaService.buscaPorTitulo(params)
+	}
+
+	def buscaPorAutor(Integer max) {
+			
+	params.max = Math.min(max ?: 10, 100)
+	buscaService.buscaPorAutor(params)
+	}
+	
 }

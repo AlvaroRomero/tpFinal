@@ -15,8 +15,8 @@
 				<sec:ifAllGranted roles="ROLE_ADMIN">
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 				</sec:ifAllGranted>
-				<li><g:form action="buscaPorTitulo" method="get"><g:textField name='a' value='Busqueda por titulo'></g:textField></g:form></li>
-				<li><g:form action="buscaPorAutor" method="get"><g:textField name='a' value='Busqueda por autor'></g:textField></g:form></li>
+				<li><g:form action="buscaPorTitulo" method="get"><g:textField name='a' placeholder='Busqueda por titulo'></g:textField></g:form></li>
+				<li><g:form action="buscaPorAutor" method="get"><g:textField name='a' placeholder='Busqueda por autor'></g:textField></g:form></li>
 			</ul>
 		</div>
 		<div id="list-libro" class="content scaffold-list" role="main">

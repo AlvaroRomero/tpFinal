@@ -1,0 +1,168 @@
+#header {
+		 width:100%;
+		 background: url(../images/header-bg-top.jpg) left top repeat-x #f3cb7d;
+		 height:162px;
+		 position:relative;
+		 z-index:15;
+		 margin:0 0 0 0px;
+		 padding:0px 0 0 0;
+	}
+	.header-bot { height:162px; background: url(../images/header-bg-bot.jpg) center bottom no-repeat;  width:100%;}
+			#topmenu {
+				border:none;
+				height:51px;
+				width:auto;
+				margin:0 0 0px 0;
+				padding:0px 0 0 0px;
+				position:absolute;
+				left:0px;
+				top:0px;
+			}
+			
+			#search {
+				position:absolute;
+				top:59px;
+				right:97px;
+				background:none;
+				width:368px;
+				height:33px;
+				padding:0px 0 0 0;
+				margin:0;
+				overflow:hidden;
+				z-index:1;
+			}
+			.currency {
+			background:none;	
+			width:280px;
+			height:23px;
+			margin:0;
+			padding:0px;
+			position:absolute;
+			right:1px;
+			top:5px;
+			z-index:100;
+			
+		}
+		#logo {
+			position:absolute;
+			left:0px;
+			top:40px;
+			font-size:0px;
+			width:143px;
+			height:51px;
+			padding:0;
+			margin:15px;
+			z-index:5;
+			
+		}
+		
+		.cart {
+			position:absolute;
+			border:none;
+			top:57px;
+			right:0px;
+			width:65px;
+			height:41px;
+			background:url(../images/cart-img.png) left top no-repeat;
+			padding:0 0 0 0px;
+			margin:0;
+			overflow:hidden;
+			text-align:right;
+		}
+		.cart hr { display:none;}
+		
+		.module_banners { z-index:50; margin-bottom:40px; }
+		
+/* ------------------------------------- search --- */
+	.search {
+		overflow:hidden;
+		background:none;
+		margin:0px 0 0 0px;
+		position:relative;
+	}
+	#search h3 {font:normal 11px/14px Arial, Helvetica, sans-serif; text-transform:none; color:#686868; letter-spacing:0px; padding-right:6px; float:left; padding-top:2px;}
+	
+	.search .button {
+		text-indent:-9999px;
+		background:url(../images/search-button.png) left top no-repeat;
+		font:bold 14px/21px Arial, Helvetica, sans-serif;
+		border:none !important;
+		text-transform:uppercase;
+		letter-spacing:-1px;
+		color:#fff;
+		width:33px;
+		height:31px;
+		position:absolute;
+		right:0px;
+		top:1px;
+		float:none;
+		padding:0 0 0px 0;
+		vertical-align:middle;
+		margin:0px 0px 0 0px;
+	}
+	.search .button:hover {background:url(../images/search-button-active.png) left top no-repeat;}
+	
+	.search .inputbox {
+		background:url(../images/search-input.png) left top no-repeat;
+		text-transform:none;
+		border:none;
+		color:#a8a8a8;
+		font:normal 12px/19px Arial, Helvetica, sans-serif!important;
+		padding:8px 20px 8px 10px;
+		margin:0px 0px 0px 0px;
+		vertical-align:top;
+		display:inline-block;
+		width:316px;
+		height:17px;
+		float:left;
+	}
+
+/* ------------------------------------- topmenu --- */
+#topmenu {
+    border: medium none;
+    height: 51px;
+    left: 0;
+    margin: 22px 0px 0px 15px;
+	
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 250px;
+}
+
+	.moduletable-nav ul.menu {
+		list-style:none;
+		background:none;
+		float:none;
+		overflow:hidden;
+		padding:3px 0px 0 0px;
+		margin:0 0px 0px 0px;
+			
+	}
+		.moduletable-nav ul.menu li {
+			font:normal 25px/30px Tahoma, Geneva, sans-serif;
+			background:none;
+			letter-spacing:0px;
+			text-transform:none;
+			float:left;
+			margin:0 0px 0 0px;
+			padding:0px 0px 0px 29px;
+			text-shadow:1px 1px 2px #fff;
+		}
+		
+		.moduletable-nav ul.menu li:first-child {margin:0; padding:0;}
+			.moduletable-nav ul.menu li a {
+				color:#4c4c4c;
+				display:inline-block;
+				text-decoration:none;
+				text-align:center;
+				padding:0;
+				cursor:pointer;
+			}
+			/* ------------------- hover, active --- */
+			.moduletable-nav ul.menu li a:hover ,.moduletable-nav ul.menu li.active a 
+			 {
+			 background:none;
+			 text-decoration:none;
+			 color:#fff;
+			}

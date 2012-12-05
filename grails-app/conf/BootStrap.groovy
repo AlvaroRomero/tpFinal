@@ -134,7 +134,55 @@ class BootStrap {
 			  genero:'Cocina')
 			  libro.save(flush: true)
 			  
+		  libro = new Libro(
+			  titulo:'Harry Potter and the Deadly Hallows',
+			  autor:'Rowling',
+			  estado:'Disponible',
+			  genero:'Ficcion')
+			  libro.save(flush: true)
 			  
+		  libro = new Libro(
+			  titulo:'Bossypants',
+			  autor:'Tina Fey',
+			  estado:'Disponible',
+			  genero:'Biografia')
+			  libro.save(flush: true)
+			  
+		  libro = new Libro(
+			  titulo:'Things Fall Apart',
+			  autor:'Chinua Achebe',
+			  estado:'Disponible',
+			  genero:'Ficcion')
+			  libro.save(flush: true)
+						  
+		  libro = new Libro(
+			  titulo:'Sarahs Key',
+			  autor:'Tatiana de Rosnay',
+			  estado:'Disponible',
+			  genero:'Ficcion')
+			  libro.save(flush: true)
+						  
+		  libro = new Libro(
+			  titulo:'Before i go to sleep',
+			  autor:'Watson',
+			  estado:'Disponible',
+			  genero:'Ficcion')
+			  libro.save(flush: true)
+								  
+		  libro = new Libro(
+			  titulo:'The best of me',
+			  autor:'Nicholas Spark',
+			  estado:'Disponible',
+			  genero:'Ficcion')
+			  libro.save(flush: true)
+									  
+		  libro = new Libro(
+			  titulo:'Viscount Breckenridge to the Rescue: A Cynster Novel',
+			  autor:'Stephanie laurens',
+			  estado:'Disponible',
+			  genero:'Ficcion')
+			  libro.save(flush: true)
+									  
 		 def librolector = new LibroLector(
 				  lector:'Diego',
 				  libro:'Cocina sin excusas',
